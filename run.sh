@@ -6,12 +6,13 @@ SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 cd $SCRIPTPATH
 
-mkdir build
+mkdir -p build
+rm -rf build/*
 cd build
 
 #generate cmake project in the "build" folder
 cmake ..
 
 #build and run
-make && ../build/fpmtop -u http://bob.node01/status
+make && ../build/fpmtop -u http://127.0.0.1/nginx_status
 
