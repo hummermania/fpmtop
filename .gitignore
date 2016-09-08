@@ -12,3 +12,4 @@
 *.xcodeproj/*.perspective*
 *.xcodeproj/*.mode*
 *xcuserdata*
+build/*
