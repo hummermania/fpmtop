@@ -23,3 +23,5 @@ endif(WIN32)
 
 link_directories(/usr/lib/x86_64-linux-gnu /usr/lib64 /lib64)
 target_link_libraries(fpmtop ncurses curl pugixml tinfo)
+
+install(TARGETS fpmtop DESTINATION /usr/local/bin)
